@@ -1,5 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import { render } from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+import 'core-js/es/map'
+import 'core-js/es/set'
+import 'raf/polyfill'
+
+import App from 'components/App'
+
+const rootComponent = <App />
+const rootElement = document.getElementById('app')
+
+render(rootComponent, rootElement)
